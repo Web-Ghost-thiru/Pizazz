@@ -50,6 +50,7 @@ window.onload = function() {
   }
 if(userEmailId){
     document.getElementById('logoutBtn').style.display = 'inline-block';
+    document.getElementById('logoutBtn').style.cursor = 'pointer';
     document.getElementById('titleuser').setAttribute('title', userEmailId.slice(0,userEmailId.indexOf("@")));
   }
   else{
