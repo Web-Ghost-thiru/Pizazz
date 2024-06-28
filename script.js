@@ -19,9 +19,7 @@ function signup() {
 
   if (email && password && password === confirmPassword) {
       alert('Signup successful!');
-      localStorage.setItem('loggedInUser', email);
       localStorage.setItem('userEmail', email);
-      localStorage.setItem('password', password);
       window.location.href = "index.html";
       // document.getElementById('titleuser').setAttribute('title', email);
   } else if (!email || !password) {
