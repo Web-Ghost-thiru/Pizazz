@@ -42,6 +42,7 @@ window.onload = function() {
   var userEmailId  = localStorage.getItem('loggedInUser');
   if (loggedInUser) {
       document.getElementById('logoutBtn').style.display = 'inline-block';
+      document.getElementById('logoutBtn').style.cursor = 'pointer';
       document.getElementById('titleuser').setAttribute('title', loggedInUser.slice(0,loggedInUser.indexOf("@")));
   }
   else{
