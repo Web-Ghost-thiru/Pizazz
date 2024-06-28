@@ -4,7 +4,7 @@ function login() {
   if (email && password) {
       localStorage.setItem('loggedInUser', email);
       alert("Login Successful");
-      window.location.href = "home.html";
+      window.location.href = "index.html";
       // document.getElementById('titleuser').setAttribute('title', email);
       
   } else {
@@ -22,7 +22,7 @@ function signup() {
       localStorage.setItem('loggedInUser', email);
       localStorage.setItem('userEmail', email);
       localStorage.setItem('password', password);
-      window.location.href = "home.html";
+      window.location.href = "index.html";
       // document.getElementById('titleuser').setAttribute('title', email);
   } else if (!email || !password) {
       alert("Please enter both email and password.");
@@ -34,7 +34,7 @@ function logout() {
   localStorage.removeItem('loggedInUser');
   localStorage.removeItem('userEmail');
 
-  window.location.href = "home.html";
+  window.location.href = "index.html";
 }
 
 window.onload = function() {
