@@ -85,12 +85,14 @@ function initApp(){
         newDiv.innerHTML = `
             <img src="image/${value.image}">
             <div class="title">${value.name}</div>
-            <div class="price">₹ ${value.price.toLocaleString()}</div>
+            <div class="price">₹ ${value.price}</div>
             <button onclick="addToCart(${key})">Add To Cart</button>`;
         list.appendChild(newDiv);
     })
 }
+
 initApp();
+
 function addToCart(key){
     if(listCards[key] == null){
         listCards[key] = JSON.parse(JSON.stringify(products[key]));
@@ -98,6 +100,7 @@ function addToCart(key){
     }
     reloadCart();
 }
+
 function reloadCart(){
     listCard.innerHTML = '';
     let count = 0;
@@ -110,7 +113,7 @@ function reloadCart(){
             newDiv.innerHTML = `
                 <div><img src="image/${value.image}"/></div>
                 <div>${value.name}</div>
-                <div>${value.price.toLocaleString()}</div>
+                <div>${value.price}</div>
                 <div>
                     <button onclick="changeQuantity(${key}, ${value.quantity - 1})" class="addbtn" >-</button>
                     <div class="count">${value.quantity}</div>
@@ -119,9 +122,11 @@ function reloadCart(){
                 listCard.appendChild(newDiv);
         }
     })
-    total.innerText = `₹Total Amount: ${totalPrice}`.toLocaleString();
+    
+    total.innerText = `₹Total Amount: ${totalPrice}`;
     quantity.innerText = count;
 }
+
 function changeQuantity(key, quantity){
     if(quantity == 0){
         delete listCards[key];

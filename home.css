@@ -8,7 +8,7 @@ body{
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal; 
-    background-image: url(manjal\ background.png);
+    background-image: url(./image/Yellow\ Vector.png);
     background-attachment: fixed;
     height: 100%;
     width: 100%;
@@ -16,6 +16,9 @@ body{
 #loading{
     animation: rotation 15s infinite linear;
     width:200px;
+}
+#loading:hover {
+    animation-play-state: paused;
 }
 @keyframes rotation{
     from{
@@ -25,6 +28,7 @@ body{
         transform: rotate(359deg);
     }
 }
+
 .navbar{   
     height: 60px; 
     width: 100%;
@@ -69,7 +73,8 @@ body{
     transition: 0.3s;
 }
 .background-image{
-    background-image: url("wallpaperflare.com_wallpaper1.jpg");
+    background-image: url("./image/wallpaperflare.com_wallpaper1.jpg");
+    /* background-image: url("wallpaperflare.com_wallpaper1.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
     height: 900px;
@@ -287,8 +292,6 @@ header{
     
     color: #FAC564;
 }
-
-
 .addbtn{
     font-size: 20px;
     width: 20px;
