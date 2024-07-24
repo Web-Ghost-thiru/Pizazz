@@ -46,8 +46,9 @@ function signup() {
 function logout() {
   localStorage.removeItem('loggedInUser');
   localStorage.removeItem('userEmail');
+  localStorage.removeItem('cartItems');
   window.location.href = "index.html";
-}
+} 
 
 window.onload = function() {
   var loggedInUser = localStorage.getItem('loggedInUser');
